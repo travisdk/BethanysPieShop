@@ -14,7 +14,7 @@ namespace BethanysPieShop.Controllers
             _categoryRepository = categoryRepository;
         }
 
-        public IActionResult List(string category)
+        public ViewResult List(string category)
         {
             IEnumerable<Pie> pies;
             string? currentCategory;
@@ -39,6 +39,11 @@ namespace BethanysPieShop.Controllers
                 return NotFound();
             }
             return View(pie);
+        }
+
+        public IActionResult Search()
+        {
+            return View();
         }
 
     }

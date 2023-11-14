@@ -1,4 +1,4 @@
-﻿using BethanysPieShop.Models;
+﻿    using BethanysPieShop.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BethanysPieShop.Components
@@ -13,10 +13,8 @@ namespace BethanysPieShop.Components
         }
         public IViewComponentResult Invoke()
         {
-
             var categories = _categoryRepository.AllCategories.OrderBy(c => c.CategoryName);
             return View(categories);
-
         }
 
     }
